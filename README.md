@@ -1,6 +1,6 @@
 # Headless WordPress Theme
 
-One Paragraph of project description goes here
+WordPress Theme created with GatsbyJS
 
 ### What I used
 
