@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Ranunculus Design`,
+    description: `ベストな結婚式のかたちと、それが叶う結婚式場をご提案。結婚式の内容から費用、段取りまで、トータルに相談できます。`,
+    author: `none`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,8 +27,15 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "ranunculusdesign.lo",
+        protocol: "http",
+        hostingWPCOM: false,
+        useACF: true,
+        verboseOutput: true,
+      },
+    },
   ],
 }
