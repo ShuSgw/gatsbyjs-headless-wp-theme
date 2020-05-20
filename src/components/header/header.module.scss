@@ -1,0 +1,26 @@
+@import "../global.scss";
+
+.fontAwesomeWrap {
+    text-align: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+
+    @include tab {
+        display: none;
+    }
+}
+
+.closing {
+    padding: .5em;
+    font-size: 30px;
+    background-color: red;
+    top: 0;
+    right: 0;
+    position: 9999;
+}
+
+.logoImgWrap {
+    width: 100px;
+}

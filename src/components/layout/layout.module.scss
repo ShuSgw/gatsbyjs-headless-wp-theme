@@ -1,0 +1,23 @@
+@import "../global.scss";
+
+.sample {
+    background: blue;
+
+    @include tab {
+        // background-color: yellow;
+    }
+}
+
+.container {
+    width: 90%;
+}
+
+.body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+}

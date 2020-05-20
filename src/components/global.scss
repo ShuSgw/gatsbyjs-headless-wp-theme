@@ -1,0 +1,73 @@
+// // reset
+@import "../../node_modules/reset-css/sass/reset";
+// font-family
+$mainFontFa: "Crete Round",
+serif;
+$subFontFa: "Roboto",
+sans-serif;
+$thrdFontFa: "Oswald",
+sans-serif;
+
+// color
+$pri-color: #0c1d3d;
+$sec-color: #fff;
+$ter-color: #666666;
+$sub-ter-color: #999999;
+$input-back-color: #f2f2f2;
+$title-seperator-line: #dddddd;
+$border-color: #dddddd;
+// text-size
+$font_18:18px;
+// extra text
+
+// headgings size
+
+// hero-header
+
+// need to fix $main-sub-head and $hero-head
+
+// font-weight
+// $weight-normal:normal;
+// $weight-light:lighter;
+
+// media querry
+$pc: 1024px;
+$tab: 768px;
+// $sp:370px;
+
+// box
+$desktopMaxContainer: 1200px;
+
+@mixin tab {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+// body {
+//   background: red;
+
+//   @include tab {
+//     background-color: yellow;
+//   }
+
+//   @include pc {
+//     background-color: blue;
+//   }
+// }
+
+.main {
+  flex: 1;
+}

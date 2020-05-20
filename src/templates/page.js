@@ -1,9 +1,10 @@
 import React from "react"
+import Layout from "../components/layout/Layout"
 const pageTemplate = props => {
   return (
-    <div>
+    <Layout>
       <h1>Single Page</h1>
-    </div>
+    </Layout>
   )
 }
 
