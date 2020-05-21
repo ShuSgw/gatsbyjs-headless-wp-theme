@@ -8,7 +8,7 @@ import {
   styleNavWrap,
   styleNav,
   hamburger,
-  fontAwesomeWrap,
+  hamburgerIconWrap,
   active,
 } from "./nav.module.scss"
 
@@ -48,7 +48,7 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
 
   return (
     <div className={`${styleNavWrap} ${boolNav && active}`}>
-      <div className={fontAwesomeWrap}>
+      <div className={hamburgerIconWrap}>
         <FontAwesomeIcon
           onClick={() => {
             toggleNav(!boolNav)

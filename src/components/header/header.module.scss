@@ -1,8 +1,25 @@
 @import "../global.scss";
 
-.fontAwesomeWrap {
+.container {
+    width: $siteWidth;
+    background: red;
+    margin: 0 auto;
+}
+
+
+.headerContentsWrap {
+    background: pink;
+
+    @include tab {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.closingIconWrap {
     text-align: right;
     position: fixed;
+    background: pink;
     top: 0;
     right: 0;
     z-index: 9999;
@@ -23,4 +40,5 @@
 
 .logoImgWrap {
     width: 100px;
+    padding: 15px 0;
 }
