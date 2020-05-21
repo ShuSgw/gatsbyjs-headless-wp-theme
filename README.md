@@ -16,6 +16,7 @@ WordPress Theme created with GatsbyJS
 
 - WordPress / WordPress Plugins
   (ACF to REST API, Advanced Custom Fields, WP-REST-API V2 Menus)
+- node.js for the configuration of GatsbyJS
 
 ### Processes
 
