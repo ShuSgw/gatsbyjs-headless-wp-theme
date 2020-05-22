@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import SocialBtns from "../socialBtns/SocialBtns"
 
 import { useStaticQuery, graphql } from "gatsby"

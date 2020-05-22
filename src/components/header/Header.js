@@ -34,7 +34,7 @@ const Header = props => {
 
           <div className={logoImgWrap}>
             <Link to={`/`}>
-              <Image name={"logo.png"} />
+              <Image fileName="logo.png" alt="logo" name={"logo.png"} />
             </Link>
           </div>
 
