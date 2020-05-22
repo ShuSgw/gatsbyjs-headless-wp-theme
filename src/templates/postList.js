@@ -23,6 +23,7 @@ const postList = ({ pageContext }) => {
             <li key={id}>
               <Link key={id} to={`/post/${each.node.id}`}>
                 {each.node.title}
+                <br />
                 {each.node.featured_media ? (
                   <Img
                     fixed={

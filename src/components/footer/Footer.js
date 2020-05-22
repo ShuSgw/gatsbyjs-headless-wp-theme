@@ -1,10 +1,10 @@
 import React from "react"
-
+import { container } from "./footer.module.scss"
 const Footer = props => {
   return (
-    <div>
-      <p>footer</p>
-    </div>
+    <footer>
+      <div className={container}>footer</div>
+    </footer>
   )
 }
 

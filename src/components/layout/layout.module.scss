@@ -9,7 +9,9 @@
 }
 
 .container {
-    width: 90%;
+    width: $siteWidth;
+    margin: 0 auto;
+    background-color: red;
 }
 
 .body {
