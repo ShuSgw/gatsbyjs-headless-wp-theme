@@ -21,7 +21,6 @@ const HeroHeader = props => {
     }
   `)
   const imageData = imageDataQueried.desktop.childImageSharp.fluid
-  console.log(imageData)
   return (
     <BackgroundImage className={hero_header} fluid={imageData}>
       <div className={container}>

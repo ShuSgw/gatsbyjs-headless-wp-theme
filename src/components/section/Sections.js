@@ -1,4 +1,6 @@
 import React from "react"
+// import { Link } from "gatsby"
+import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { container } from "./sections.module.scss"
 const Section = props => {
@@ -20,6 +22,18 @@ const Section = props => {
         edges {
           node {
             title
+            featured_media {
+              localFile {
+                childImageSharp {
+                  fixed(width: 300, height: 300) {
+                    width
+                    height
+                    src
+                    srcSet
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -37,10 +51,20 @@ const Section = props => {
       </section>
       <section>
         <div className={container}>
-          {casesData.map(casesData => {
+          {casesData.map((casesData, key) => {
             return (
-              <div>
+              <div key={key}>
                 <h4>{casesData.node.title}</h4>
+                {casesData.node.featured_media ? (
+                  <Img
+                    fixed={
+                      casesData.node.featured_media.localFile.childImageSharp
+                        .fixed
+                    }
+                  />
+                ) : (
+                  ""
+                )}
               </div>
             )
           })}
