@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout/Layout"
+import HeroHeader from "../components/hero-header/HeroHeader"
+import Sections from "../components/section/Sections"
 
 // import Image from "../components/Image"
 // import SEO from "../components/Seo"
@@ -9,7 +11,8 @@ import Layout from "../components/layout/Layout"
 const IndexPage = () => (
   <Layout>
     {/* <SEO title="Home" /> */}
-    <h1>index.html</h1>
+    <HeroHeader />
+    <Sections />
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )

@@ -11,6 +11,7 @@ import {
   logoImgWrap,
   headerContentsWrap,
   container,
+  header,
 } from "./header.module.scss"
 
 import Image from "../Image"
@@ -18,7 +19,7 @@ import Image from "../Image"
 const Header = props => {
   const [boolNav, toggleNav] = useState(false)
   return (
-    <header>
+    <header className={header}>
       <div className={container}>
         <div className={headerContentsWrap}>
           {/* display:none on ↓ desktop */}

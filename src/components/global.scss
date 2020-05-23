@@ -1,5 +1,6 @@
 // // reset
 @import "../../node_modules/reset-css/sass/reset";
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 // font-family
 $mainFontFa: "Crete Round",
 serif;
@@ -73,3 +74,8 @@ $desktopMaxContainer: 1200px;
 }
 
 $siteWidth:90%;
+
+$font30:30px;
+$fontFa1: 'Sawarabi Mincho',
+sans-serif;
+;

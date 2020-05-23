@@ -20,6 +20,7 @@ const Image = props => {
       }
     }
   `)
+
   const image = data.images.edges.find(singleImageData => {
     return singleImageData.node.relativePath.includes(props.fileName)
   })

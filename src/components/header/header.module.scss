@@ -1,5 +1,13 @@
 @import "../global.scss";
 
+
+.header {
+    // position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: red;
+}
+
 .container {
     width: $siteWidth;
     background: red;
