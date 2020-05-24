@@ -76,14 +76,49 @@ $desktopMaxContainer: 1200px;
 $siteWidth:90%;
 
 $font30:30px;
+$font20:20px;
 $fontFa1: 'Sawarabi Mincho',
 sans-serif;
 ;
 
+section {
+  background-color: green;
+  margin-top: 2em;
+
+  // &:nth-of-type(2) {
+  //   background-color: red;
+  // }
+}
+
 h3 {
   background: red;
+  text-align: center;
+  font-size: $font20;
+  padding: 1em 0;
+  position: relative;
+  line-height: 1.7;
+
+  .h3_line {
+    position: relative;
+    background: green;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 110%;
+      right: 50%;
+      transform: translate(50%, 0);
+      width: 30%;
+      height: 2.5px;
+      background: black;
+    }
+  }
 }
 
 h4 {
   background: pink;
+}
+
+footer {
+  background-color: yellow;
 }
