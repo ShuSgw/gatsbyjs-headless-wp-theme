@@ -1,7 +1,53 @@
 @import "../global.scss";
 
+.footer {
+    padding: 5em 0 1em 0;
+    text-align: center;
+}
+
 .container {
     margin: 0 auto;
     width: $siteWidth;
     background-color: green;
+}
+
+.footer_box {
+    @include tab {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer_box_single {
+    @include tab {
+        width: 47%;
+    }
+}
+
+.footerNav {
+    // text-align: center;
+    margin-top: 2em;
+
+    @include tab {
+        margin-top: 0;
+        text-align: left;
+    }
+}
+
+.footerNav_items {}
+
+.footerNav_items_item {
+    padding: 1em 0;
+    background-color: pink;
+}
+
+.copyright {
+    font-size: 8px;
+    display: block;
+    padding: 3em 0 5em 0;
+
+    @include tab {
+        font-size: .9em;
+        padding: 2em 0 2em 0;
+    }
 }

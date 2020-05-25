@@ -11,7 +11,7 @@ const Image = props => {
             relativePath
             name
             childImageSharp {
-              fluid(maxWidth: 600) {
+              fluid(maxWidth: 300) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -25,8 +25,11 @@ const Image = props => {
     return singleImageData.node.relativePath.includes(props.fileName)
   })
   if (!image) return
+  {
+    console.log(image.node.childImageSharp.fluid)
 
-  return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />
+    return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />
+  }
 }
 
 export default Image

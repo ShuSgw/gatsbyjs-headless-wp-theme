@@ -77,13 +77,18 @@ $siteWidth:90%;
 
 $font30:30px;
 $font20:20px;
+$font18:18px;
 $fontFa1: 'Sawarabi Mincho',
 sans-serif;
 ;
 
 section {
   background-color: green;
-  margin-top: 2em;
+  padding-top: 2em;
+
+  @include tab {
+    padding: 3em 0;
+  }
 
   // &:nth-of-type(2) {
   //   background-color: red;
@@ -121,4 +126,8 @@ h4 {
 
 footer {
   background-color: yellow;
+}
+
+p {
+  line-height: 1.7;
 }

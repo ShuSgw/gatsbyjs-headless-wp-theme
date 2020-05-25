@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/Layout"
+import Container from "../components/container/Container"
 import Img from "gatsby-image"
 
 const postTemplate = props => {
@@ -7,12 +8,14 @@ const postTemplate = props => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-      <p>{acf ? (acf.name ? acf.name : "no name") : "no data"}</p>
-      {featured_media && (
-        <Img fixed={featured_media.localFile.childImageSharp.fixed} />
-      )}
+      <Container>
+        <h1>{title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <p>{acf ? (acf.name ? acf.name : "no name") : "no data"}</p>
+        {featured_media && (
+          <Img fixed={featured_media.localFile.childImageSharp.fixed} />
+        )}
+      </Container>
     </Layout>
   )
 }

@@ -1,8 +1,15 @@
 import React from "react"
 // import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-import { container, h3_line } from "./sections.module.scss"
+import {
+  container,
+  h3_line,
+  about_box,
+  about_box_single,
+  about_img,
+} from "./sections.module.scss"
 
+import Image from "../image"
 import SectionPost from "./SectionPost"
 
 const Section = props => {
@@ -24,14 +31,12 @@ const Section = props => {
         edges {
           node {
             title
+            id
             featured_media {
               localFile {
                 childImageSharp {
-                  fixed(width: 300, height: 300) {
-                    width
-                    height
-                    src
-                    srcSet
+                  fluid(maxWidth: 600, maxHeight: 400) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -46,14 +51,12 @@ const Section = props => {
         edges {
           node {
             title
+            id
             featured_media {
               localFile {
                 childImageSharp {
-                  fixed(width: 300, height: 300) {
-                    width
-                    height
-                    src
-                    srcSet
+                  fluid(maxWidth: 600, maxHeight: 400) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -69,12 +72,22 @@ const Section = props => {
 
   return (
     <React.Fragment>
+      {console.log(casesData)}
       <section>
         <div className={container}>
-          <h3>
-            <span className={h3_line}>About</span>
-          </h3>
-          <div dangerouslySetInnerHTML={{ __html: about.content }} />
+          <div className={about_box}>
+            <div className={about_box_single}>
+              <h3>
+                <span className={h3_line}>About</span>
+              </h3>
+              <div dangerouslySetInnerHTML={{ __html: about.content }} />
+            </div>
+            <div className={about_box_single}>
+              <div className={about_img}>
+                <Image fileName="top_about_section.png" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <SectionPost sectionTitle="事例集" data={casesData} />
