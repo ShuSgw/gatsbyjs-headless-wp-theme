@@ -21,5 +21,10 @@
 }
 
 .main {
+    padding-top: 59px;
     flex: 1;
+
+    @include tab {
+        padding-top: 72px;
+    }
 }

@@ -26,7 +26,7 @@ const postList = ({ pageContext }) => {
                 <Link key={id} to={`/post/${each.node.id}`}>
                   {each.node.title}
                   <br />
-                  {each.node.featured_media ? (
+                  {/* {each.node.featured_media ? (
                     <Img
                       fixed={
                         each.node.featured_media.localFile.childImageSharp.fixed
@@ -34,7 +34,7 @@ const postList = ({ pageContext }) => {
                     />
                   ) : (
                     ""
-                  )}
+                  )} */}
                 </Link>
               </li>
             )

@@ -7,6 +7,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    @include tab {
+        // height: 100vh;
+        height: calc(100vh - 70px);
+    }
 }
 
 .container {
@@ -29,4 +34,8 @@
     width: 100%;
     font-size: $font30;
     font-family: $fontFa1;
+
+    @include tab {
+        font-size: $font40;
+    }
 }

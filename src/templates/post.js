@@ -2,19 +2,23 @@ import React from "react"
 import Layout from "../components/layout/Layout"
 import Container from "../components/container/Container"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 const postTemplate = props => {
   const { title, content, acf, featured_media } = props.data.wordpressPost
 
   return (
     <Layout>
+      {featured_media && (
+        <BackgroundImage fluid={featured_media.localFile.childImageSharp.fluid}>
+          <Container>
+            <h1>{title}</h1>
+          </Container>
+        </BackgroundImage>
+      )}
       <Container>
-        <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         <p>{acf ? (acf.name ? acf.name : "no name") : "no data"}</p>
-        {featured_media && (
-          <Img fixed={featured_media.localFile.childImageSharp.fixed} />
-        )}
       </Container>
     </Layout>
   )
@@ -36,11 +40,12 @@ export const pageQuery = graphql`
       featured_media {
         localFile {
           childImageSharp {
-            fixed(height: 300, width: 300) {
-              height
-              width
+            fluid {
               src
               srcSet
+              aspectRatio
+              base64
+              sizes
             }
           }
         }

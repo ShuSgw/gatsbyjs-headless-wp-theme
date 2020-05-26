@@ -6,6 +6,8 @@
 }
 
 .about_box {
+    position: relative;
+
     @include tab {
         display: flex;
         justify-content: space-between;
@@ -13,8 +15,53 @@
     }
 }
 
+.about_title {
+    @include tab {
+        text-align: left;
+
+        .h3_line {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
 .about_box_single {
-    width: 47%;
+
+    &:first-of-type {
+        // padding-bottom: 100px;
+
+        @include tab {
+            padding-bottom: 0;
+        }
+    }
+
+    &:last-of-type {
+        position: absolute;
+        width: 100px;
+        right: 0;
+        bottom: 0;
+
+        @include tab {
+            width: 47%;
+            position: static;
+        }
+    }
+
+    @include tab {
+        width: 47%;
+    }
+}
+
+.about_link {
+    display: block;
+    padding-top: 80px;
+    background-color: pink;
+
+    @include tab {
+        text-align: right;
+    }
 }
 
 .about_img {

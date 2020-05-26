@@ -28,11 +28,12 @@ exports.createPages = async ({ graphql, actions }) => {
             featured_media {
               localFile {
                 childImageSharp {
-                  fixed(height: 300, width: 300) {
-                    height
-                    width
+                  fluid {
                     src
                     srcSet
+                    aspectRatio
+                    base64
+                    sizes
                   }
                 }
               }

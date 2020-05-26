@@ -74,7 +74,7 @@ $desktopMaxContainer: 1200px;
 }
 
 $siteWidth:90%;
-
+$font40:40px;
 $font30:30px;
 $font20:20px;
 $font18:18px;
@@ -102,6 +102,10 @@ h3 {
   padding: 1em 0;
   position: relative;
   line-height: 1.7;
+
+  @include tab {
+    font-size: $font30;
+  }
 
   .h3_line {
     position: relative;

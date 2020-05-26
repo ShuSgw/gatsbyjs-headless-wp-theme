@@ -1,12 +1,14 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import {
   container,
   h3_line,
   about_box,
+  about_title,
   about_box_single,
   about_img,
+  about_link,
 } from "./sections.module.scss"
 
 import Image from "../image"
@@ -21,6 +23,7 @@ const Section = props => {
             id
             title
             content
+            slug
           }
         }
       }
@@ -72,15 +75,18 @@ const Section = props => {
 
   return (
     <React.Fragment>
-      {console.log(casesData)}
+      {/* about */}
       <section>
         <div className={container}>
           <div className={about_box}>
             <div className={about_box_single}>
-              <h3>
+              <h3 className={about_title}>
                 <span className={h3_line}>About</span>
               </h3>
               <div dangerouslySetInnerHTML={{ __html: about.content }} />
+              <Link className={about_link} to={about.slug}>
+                もっと見る
+              </Link>
             </div>
             <div className={about_box_single}>
               <div className={about_img}>
@@ -90,6 +96,7 @@ const Section = props => {
           </div>
         </div>
       </section>
+      {/* about end */}
       <SectionPost sectionTitle="事例集" data={casesData} />
       <SectionPost sectionTitle="ブログ" data={blogData} />
     </React.Fragment>
