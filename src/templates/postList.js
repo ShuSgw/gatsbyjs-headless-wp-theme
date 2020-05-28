@@ -18,6 +18,7 @@ const postList = ({ pageContext }) => {
   }
   return (
     <Layout>
+      <h3>Blog</h3>
       <Container>
         <div>
           {group.map((each, id) => {
@@ -26,15 +27,15 @@ const postList = ({ pageContext }) => {
                 <Link key={id} to={`/post/${each.node.id}`}>
                   {each.node.title}
                   <br />
-                  {/* {each.node.featured_media ? (
+                  {each.node.featured_media ? (
                     <Img
-                      fixed={
-                        each.node.featured_media.localFile.childImageSharp.fixed
+                      fluid={
+                        each.node.featured_media.localFile.childImageSharp.fluid
                       }
                     />
                   ) : (
                     ""
-                  )} */}
+                  )}
                 </Link>
               </li>
             )

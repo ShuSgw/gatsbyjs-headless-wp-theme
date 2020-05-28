@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from "../components/layout/Layout"
 import Container from "../components/container/Container"
-import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
+import OtherHeros from "../components/hero-header/OtherHeros"
 
 const postTemplate = props => {
   const { title, content, acf, featured_media } = props.data.wordpressPost
@@ -10,11 +9,7 @@ const postTemplate = props => {
   return (
     <Layout>
       {featured_media && (
-        <BackgroundImage fluid={featured_media.localFile.childImageSharp.fluid}>
-          <Container>
-            <h1>{title}</h1>
-          </Container>
-        </BackgroundImage>
+        <OtherHeros title={title} featured_media={featured_media} />
       )}
       <Container>
         <div dangerouslySetInnerHTML={{ __html: content }} />
