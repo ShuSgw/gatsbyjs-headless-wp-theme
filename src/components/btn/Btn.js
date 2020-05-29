@@ -5,11 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const Btn = ({ content, icon }) => {
   return (
     <React.Fragment>
-      <div className={btn}>
+      <a
+        href="mailto:info@ranunculus-design.com"
+        target="_blank"
+        className={btn}
+      >
         <FontAwesomeIcon icon={icon} />
         &nbsp;
         {content}
-      </div>
+      </a>
     </React.Fragment>
   )
 }

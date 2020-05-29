@@ -57,9 +57,9 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
           icon={faTimes}
         />
       </div>
-      <ul className={styleNav}>
+      <div className={styleNav}>
         {items.map((item, key) => (
-          <li key={key}>
+          <div key={key}>
             <Link
               className={styleItems}
               to={item.slug !== null ? `/${item.slug}` : "/"}
@@ -67,10 +67,10 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
               {item.title}
             </Link>
             {item.child_items && (
-              <ul>
+              <div>
                 {item.child_items &&
                   items.map((childItem, key) => (
-                    <li key={key}>
+                    <div key={key}>
                       <Link
                         className={styleItems}
                         to={
@@ -79,19 +79,19 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
                       >
                         {childItem.title}
                       </Link>
-                    </li>
+                    </div>
                   ))}
-              </ul>
+              </div>
             )}
-          </li>
+          </div>
         ))}
-        <li>
+        <div>
           <Link className={styleItems} to={`/post/`}>
             ブログ
           </Link>
-        </li>
+        </div>
         <SocialBtns />
-      </ul>
+      </div>
     </div>
   )
 }

@@ -1,12 +1,14 @@
 // // reset
 @import "../../node_modules/reset-css/sass/reset";
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+
 // font-family
 $mainFontFa: "Crete Round",
 serif;
 $subFontFa: "Roboto",
 sans-serif;
-$thrdFontFa: "Oswald",
+$thrdFontFa: 'Sawarabi Gothic',
 sans-serif;
 
 // color
@@ -57,20 +59,10 @@ $desktopMaxContainer: 1200px;
   }
 }
 
-// body {
-//   background: red;
-
-//   @include tab {
-//     background-color: yellow;
-//   }
-
-//   @include pc {
-//     background-color: blue;
-//   }
-// }
 
 .main {
   flex: 1;
+  line-height: 1.7;
 }
 
 $siteWidth:90%;
@@ -81,57 +73,182 @@ $font18:18px;
 $fontFa1: 'Sawarabi Mincho',
 sans-serif;
 ;
+$fontfa2: 'M PLUS 1p',
+sans-serif;
 
-section {
-  background-color: green;
-  padding-top: 2em;
-
-  @include tab {
-    padding: 3em 0;
-  }
-
-  // &:nth-of-type(2) {
-  //   background-color: red;
-  // }
+h2 {
+  font-size: 35px;
+  background: #FFF0F5;
+  padding: 0.5em;
 }
 
 h3 {
-  background: red;
-  text-align: center;
-  font-size: $font20;
-  padding: 1em 0;
-  position: relative;
-  line-height: 1.7;
+  font-size: 25px;
+  padding: 0.5em;
+  background: #FFF0F5;
+  border-bottom: solid 3px pink;
+}
+
+h4 {
+  font-size: 25px;
+  padding: 0.25em 0.5em;
+  background: transparent;
+  border-left: solid 5px pink;
+}
+
+h5 {
+  font-size: 25px;
+  padding: 0.5em;
+  line-height: 1.3;
+  background: #FFF0F5;
+  border-radius: 25px 0px 0px 25px;
+
+  &:before {
+    content: '●';
+    color: white;
+    margin-right: 8px;
+  }
+}
+
+h6 {
+  font-size: 20px;
+  padding: 0.5em;
+  background: #FFF0F5;
+}
+
+section {
+  padding: 2em 0 3em 0;
+
 
   @include tab {
-    font-size: $font30;
+    padding: 3em 0 4em 0;
   }
 
-  .h3_line {
-    position: relative;
-    background: green;
+  &:nth-of-type(1) {
+    padding: 3em 0 5em 0;
+  }
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 110%;
-      right: 50%;
-      transform: translate(50%, 0);
-      width: 30%;
-      height: 2.5px;
-      background: black;
+  &:nth-of-type(2) {
+    background-color: #FFF0F5;
+  }
+}
+
+.custom_h3 {
+  text-align: center;
+  font-size: $font30;
+  padding: 1em 0 1.5em 0;
+  position: relative;
+  line-height: 1.7;
+  font-size: bold;
+  font-family: $fontFa1;
+  color: grey;
+
+  @include tab {
+    font-size: $font40;
+  }
+}
+
+
+.h3_line {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 120%;
+    right: 50%;
+    transform: translate(50%, 0);
+    width: 60%;
+    height: 2.5px;
+    background: grey;
+  }
+}
+
+p {
+  color: grey;
+  line-height: 1.7;
+  font-family: $fontfa2;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+  font-family: $fontfa2;
+  color: rgb(41, 41, 41);
+
+  @include tab {
+    &:hover {
+      color: grey;
+      transition: all 0.5s ease;
     }
   }
 }
 
-h4 {
-  background: pink;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: grey;
+  font-family: $fontfa2;
+  margin-top: 1em;
+  color: #292929 !important;
 }
 
-footer {
-  background-color: yellow;
+
+
+table {
+  margin: 1em 0;
 }
 
-p {
-  line-height: 1.7;
+table *,
+table *:before,
+table *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: $fontfa2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+
+th {
+  width: 30%;
+  text-align: left;
+  background: #f4f4f4;
+}
+
+
+ul,
+ol {
+  background: #fcfcfc;
+  /*背景色*/
+  padding: 0.5em 0.5em 0.5em 2em;
+  /*ボックス内の余白*/
+  border: solid 3px gray;
+  /*線の種類 太さ 色*/
+  list-style-type: disc;
+  margin: 1em 0;
+
+  ul,
+  ol {
+    border: none;
+  }
+}
+
+ul li,
+ol li {
+  line-height: 1.5;
+  /*文の行高*/
+  padding: 0.5em 0;
+  /*前後の文との余白*/
 }

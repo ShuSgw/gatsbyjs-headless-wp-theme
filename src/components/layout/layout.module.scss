@@ -1,17 +1,8 @@
 @import "../global.scss";
 
-.sample {
-    background: blue;
-
-    @include tab {
-        // background-color: yellow;
-    }
-}
-
 .container {
     width: $siteWidth;
     margin: 0 auto;
-    background-color: red;
 }
 
 .body {
@@ -21,10 +12,5 @@
 }
 
 .main {
-    padding-top: 59px;
     flex: 1;
-
-    @include tab {
-        padding-top: 72px;
-    }
 }

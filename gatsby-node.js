@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
             featured_media {
               localFile {
                 childImageSharp {
-                  fluid {
+                  fluid(maxWidth: 600, maxHeight: 400) {
                     src
                     srcSet
                     aspectRatio

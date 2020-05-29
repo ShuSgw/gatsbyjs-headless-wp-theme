@@ -1,7 +1,6 @@
 @import "../global.scss";
 
 .styleNavWrap {
-    background-color: yellow;
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -9,11 +8,13 @@
     left: 0;
     z-index: 9999;
     display: none;
+    background: white;
 
     @include tab {
         display: block;
         height: initial;
         position: static;
+        background: transparent;
     }
 }
 
@@ -32,15 +33,13 @@
         margin-top: 0;
         display: flex;
         justify-content: flex-end;
-        background-color: blue;
     }
 }
 
 .styleItems {
     display: block;
-    padding: 1.5em 0;
+    padding: 2em 0;
     font-size: $font_18;
-    background-color: red;
 
     @include tab {
         margin-left: 1em;
@@ -48,7 +47,6 @@
 }
 
 .hamburgerIconWrap {
-    background-color: pink;
     text-align: right;
 
     @include tab {
@@ -59,7 +57,6 @@
 .hamburger {
     padding: .5em;
     font-size: 30px;
-    background-color: red;
     top: 0;
     right: 0;
     position: 9999;

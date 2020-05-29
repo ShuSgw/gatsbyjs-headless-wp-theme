@@ -14,6 +14,8 @@ import {
 import Image from "../image"
 import SectionPost from "./SectionPost"
 
+import Container from "../container/Container"
+
 const Section = props => {
   const { allWordpressPage, post1, post2 } = useStaticQuery(graphql`
     query {
@@ -77,12 +79,12 @@ const Section = props => {
     <React.Fragment>
       {/* about */}
       <section>
-        <div className={container}>
+        <Container>
           <div className={about_box}>
             <div className={about_box_single}>
-              <h3 className={about_title}>
+              <div className={`${about_title} custom_h3`}>
                 <span className={h3_line}>About</span>
-              </h3>
+              </div>
               <div dangerouslySetInnerHTML={{ __html: about.content }} />
               <Link className={about_link} to={about.slug}>
                 もっと見る
@@ -94,7 +96,7 @@ const Section = props => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
       {/* about end */}
       <SectionPost sectionTitle="事例集" data={casesData} />

@@ -9,16 +9,17 @@ import {
   post_box_single,
   post_box_single_title,
 } from "./sections.module.scss"
+import Container from "../container/Container"
 import Image from "../image"
 import { Link } from "gatsby"
 
 const SectionPost = ({ data, sectionTitle }) => {
   return (
     <section>
-      <div className={container}>
-        <h3>
+      <Container>
+        <div className="custom_h3">
           <span className={h3_line}>{sectionTitle}</span>
-        </h3>
+        </div>
         <div className={post_box}>
           {data.map((data, key) => {
             return (
@@ -40,12 +41,12 @@ const SectionPost = ({ data, sectionTitle }) => {
                     <Image fileName="gatsby-astronaut.png" />
                   </div>
                 )}
-                <h4 className={post_box_single_title}>{data.node.title}</h4>
+                <div className={post_box_single_title}>{data.node.title}</div>
               </Link>
             )
           })}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

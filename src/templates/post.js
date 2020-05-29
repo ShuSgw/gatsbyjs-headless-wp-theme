@@ -35,12 +35,8 @@ export const pageQuery = graphql`
       featured_media {
         localFile {
           childImageSharp {
-            fluid {
-              src
-              srcSet
-              aspectRatio
-              base64
-              sizes
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

@@ -5,7 +5,6 @@ import {
   hero_header_title,
 } from "./hero_header.module.scss"
 import BackgroundImage from "gatsby-background-image"
-import Container from "../container/Container"
 
 const OtherHero = ({ title, featured_media }) => {
   return (
@@ -21,9 +20,3 @@ const OtherHero = ({ title, featured_media }) => {
 }
 
 export default OtherHero
-
-// < BackgroundImage fluid = { featured_media.localFile.childImageSharp.fluid } >
-//   <Container>
-//     <h1>{title}</h1>
-//   </Container>
-//       </BackgroundImage >

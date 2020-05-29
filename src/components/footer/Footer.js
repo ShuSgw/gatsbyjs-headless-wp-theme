@@ -7,25 +7,27 @@ import {
   footer_box,
   footer_box_single,
   copyright,
+  footer_box_single_title,
 } from "./footer.module.scss"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
 import FooterNav from "./FooterNav"
+import Container from "../container/Container"
 
 const Footer = ({ menuTitle, toggleNav, boolNav }) => {
   return (
     <footer className={footer}>
-      <div className={container}>
+      <Container>
         <div className={footer_box}>
           <div className={footer_box_single}>
-            <h3>
+            <div class={footer_box_single_title}>
               お見積り、ご相談
               <br />
               お問い合わせはこちらまで
-            </h3>
+            </div>
             <p>営業時間：11:00 - 22:00</p>
             <Btn icon={faEnvelope} content="info@ranunculus-design.com" />
-            <Btn icon={faPhone} content="info@ranunculus-design.com" />
+            <Btn icon={faPhone} content="092-111-1111" />
             <SocialBtns />
           </div>
           <div className={footer_box_single}>
@@ -33,7 +35,7 @@ const Footer = ({ menuTitle, toggleNav, boolNav }) => {
           </div>
         </div>
         <small className={copyright}>© Copyright 2020 Ranunculus Design</small>
-      </div>
+      </Container>
     </footer>
   )
 }

@@ -14,13 +14,14 @@ import {
   header,
 } from "./header.module.scss"
 
+import Container from "../container/Container"
 import Image from "../Image"
 
 const Header = props => {
   const [boolNav, toggleNav] = useState(false)
   return (
     <header className={header}>
-      <div className={container}>
+      <Container>
         <div className={headerContentsWrap}>
           {/* display:none on ↓ desktop */}
           <div className={closingIconWrap}>
@@ -41,7 +42,7 @@ const Header = props => {
 
           <Nav menuTitle={"main"} toggleNav={toggleNav} boolNav={boolNav} />
         </div>
-      </div>
+      </Container>
     </header>
   )
 }

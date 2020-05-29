@@ -9,8 +9,7 @@
     position: relative;
 
     @include tab {
-        // height: 100vh;
-        height: calc(100vh - 70px);
+        height: 100vh;
     }
 }
 
@@ -51,6 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2.5em;
 }
 
 .other_heros_box {

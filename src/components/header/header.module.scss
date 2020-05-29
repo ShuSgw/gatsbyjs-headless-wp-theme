@@ -5,18 +5,15 @@
     position: fixed;
     width: 100%;
     z-index: 999;
-    background-color: red;
 }
 
 .container {
     width: $siteWidth;
-    background: red;
     margin: 0 auto;
 }
 
 
 .headerContentsWrap {
-    background: pink;
 
     @include tab {
         display: flex;
@@ -27,7 +24,6 @@
 .closingIconWrap {
     text-align: right;
     position: fixed;
-    background: pink;
     top: 0;
     right: 0;
     z-index: 9999;
@@ -40,7 +36,6 @@
 .closing {
     padding: .5em;
     font-size: 30px;
-    background-color: red;
     top: 0;
     right: 0;
     position: 9999;

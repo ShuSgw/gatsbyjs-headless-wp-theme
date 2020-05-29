@@ -1,8 +1,11 @@
 import React from "react"
 import Layout from "../components/layout/Layout"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
 import Container from "../components/container/Container"
+
+import Thumb from "../components/thumb/Thumb"
+import ThumbWrap from "../components/thumb/ThumbWrap"
+import OtherHeros_placeholder from "../components/hero-header/OtherHeros_placeholder"
 
 const postList = ({ pageContext }) => {
   const { group, index, first, last, pageCount } = pageContext
@@ -18,34 +21,19 @@ const postList = ({ pageContext }) => {
   }
   return (
     <Layout>
-      <h3>Blog</h3>
+      <OtherHeros_placeholder title="Blog" />
       <Container>
         <div>
-          {group.map((each, id) => {
-            return (
-              <li key={id}>
-                <Link key={id} to={`/post/${each.node.id}`}>
-                  {each.node.title}
-                  <br />
-                  {each.node.featured_media ? (
-                    <Img
-                      fluid={
-                        each.node.featured_media.localFile.childImageSharp.fluid
-                      }
-                    />
-                  ) : (
-                    ""
-                  )}
-                </Link>
-              </li>
-            )
-          })}
+          <ThumbWrap>
+            {group.map((each, id) => {
+              return <Thumb key={id} eachPost={each} />
+            })}
+          </ThumbWrap>
           <div>
-            <h4>
+            <div>
               {index}/{pageCount}
-            </h4>
+            </div>
           </div>
-
           <div className="previousLink">
             <NavLink
               test={first}

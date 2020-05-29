@@ -30,17 +30,17 @@ const FooterNav = ({ menuTitle }) => {
   })
   return (
     <div className={footerNav}>
-      <ul>
+      <div>
         {items.map((item, key) => (
-          <li key={key} className={footerNav_items_item}>
+          <div key={key} className={footerNav_items_item}>
             <Link to={item.slug !== null ? `/${item.slug}` : "/"}>
               {item.title}
             </Link>
             {item.child_items && (
-              <ul>
+              <div>
                 {item.child_items &&
                   items.map((childItem, key) => (
-                    <li key={key}>
+                    <div key={key}>
                       <Link
                         to={
                           childItem.slug !== null ? `/${childItem.slug}` : "/"
@@ -48,16 +48,16 @@ const FooterNav = ({ menuTitle }) => {
                       >
                         {childItem.title}
                       </Link>
-                    </li>
+                    </div>
                   ))}
-              </ul>
+              </div>
             )}
-          </li>
+          </div>
         ))}
-        <li className={footerNav_items_item}>
+        <div className={footerNav_items_item}>
           <Link to={`/post/`}>ブログ</Link>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   )
 }

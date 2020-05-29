@@ -3,7 +3,10 @@
 
 .container {
     width: $siteWidth;
+    max-width: $desktopMaxContainer;
     height: 100%;
     margin: 0 auto;
     position: relative;
+    font-family: $fontfa2;
+    color: grey;
 }

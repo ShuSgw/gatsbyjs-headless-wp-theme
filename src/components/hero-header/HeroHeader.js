@@ -8,6 +8,8 @@ import {
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
+import Container from "../container/Container"
+
 const HeroHeader = props => {
   const imageDataQueried = useStaticQuery(graphql`
     query {
@@ -23,13 +25,13 @@ const HeroHeader = props => {
   const imageData = imageDataQueried.desktop.childImageSharp.fluid
   return (
     <BackgroundImage className={hero_header} fluid={imageData}>
-      <div className={container}>
+      <Container>
         <div className={hero_contentsBox}>
           <h1 className={hero_header_title}>
             この文章はダミーです 文字の大きさ、 量、字間、
           </h1>
         </div>
-      </div>
+      </Container>
     </BackgroundImage>
   )
 }
