@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import { footerNav, footerNav_items_item } from "./footer.module.scss"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const FooterNav = ({ menuTitle }) => {
   const { allWordpressMenusMenusItems } = useStaticQuery(graphql`
@@ -55,7 +56,9 @@ const FooterNav = ({ menuTitle }) => {
           </div>
         ))}
         <div className={footerNav_items_item}>
-          <Link to={`/post/`}>ブログ</Link>
+          <AnchorLink href="#link1" offset="0">
+            ブログ
+          </AnchorLink>
         </div>
       </div>
     </div>

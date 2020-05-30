@@ -79,7 +79,7 @@ exports.createPages = async ({ graphql, actions }) => {
     edges: allWordpressPost.edges,
     createPage: createPage,
     pageTemplate: "src/templates/postList.js",
-    pageLength: 5,
+    pageLength: 6,
     pathPrefix: "post",
   })
 

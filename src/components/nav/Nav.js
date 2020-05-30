@@ -12,6 +12,8 @@ import {
   active,
 } from "./nav.module.scss"
 
+import AnchorLink from "react-anchor-link-smooth-scroll"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
@@ -59,7 +61,12 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
       </div>
       <div className={styleNav}>
         {items.map((item, key) => (
-          <div key={key}>
+          <div
+            key={key}
+            onClick={() => {
+              toggleNav(!boolNav)
+            }}
+          >
             <Link
               className={styleItems}
               to={item.slug !== null ? `/${item.slug}` : "/"}
@@ -85,10 +92,14 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
             )}
           </div>
         ))}
-        <div>
-          <Link className={styleItems} to={`/post/`}>
-            ブログ
-          </Link>
+        <div
+          onClick={() => {
+            toggleNav(!boolNav)
+          }}
+        >
+          <AnchorLink className={styleItems} href="#link1" offset="0">
+            Contact Me
+          </AnchorLink>
         </div>
         <SocialBtns />
       </div>

@@ -8,6 +8,11 @@
     background-size: cover;
     position: relative;
 
+    &::before,
+    &::after {
+        filter: opacity(70%);
+    }
+
     @include tab {
         height: 100vh;
     }
@@ -34,6 +39,7 @@
     width: 100%;
     font-size: $font30;
     font-family: $fontFa1;
+    color: black;
 
     @include tab {
         font-size: $font40;
@@ -50,7 +56,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
+
+    @include tab {
+        margin-bottom: 5em;
+    }
+
+    &::before,
+    &::after {
+        filter: opacity(70%);
+    }
 }
 
 .other_heros_box {

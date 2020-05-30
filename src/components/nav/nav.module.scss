@@ -42,7 +42,7 @@
     font-size: $font_18;
 
     @include tab {
-        margin-left: 1em;
+        margin-left: 3em;
     }
 }
 
@@ -60,4 +60,5 @@
     top: 0;
     right: 0;
     position: 9999;
+    color: black;
 }

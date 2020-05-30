@@ -17,7 +17,12 @@ import SectionPost from "./SectionPost"
 import Container from "../container/Container"
 
 const Section = props => {
-  const { allWordpressPage, post1, post2 } = useStaticQuery(graphql`
+  const {
+    allWordpressPage,
+    post1,
+    post2,
+    simple_description,
+  } = useStaticQuery(graphql`
     query {
       allWordpressPage(filter: { slug: { eq: "front-page" } }) {
         edges {
@@ -26,11 +31,14 @@ const Section = props => {
             title
             content
             slug
+            acf {
+              simple_description
+            }
           }
         }
       }
       post1: allWordpressPost(
-        filter: { categories: { elemMatch: { slug: { eq: "uncategorized" } } } }
+        filter: { categories: { elemMatch: { slug: { eq: "blog" } } } }
         limit: 2
       ) {
         edges {
@@ -50,7 +58,7 @@ const Section = props => {
         }
       }
       post2: allWordpressPost(
-        filter: { categories: { elemMatch: { slug: { eq: "asahi" } } } }
+        filter: { categories: { elemMatch: { slug: { eq: "cases" } } } }
         limit: 2
       ) {
         edges {
@@ -85,7 +93,8 @@ const Section = props => {
               <div className={`${about_title} custom_h3`}>
                 <span className={h3_line}>About</span>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: about.content }} />
+              {/* <div dangerouslySetInnerHTML={{ __html: about.content }} /> */}
+              <div>{about.acf.simple_description}</div>
               <Link className={about_link} to={about.slug}>
                 もっと見る
               </Link>
@@ -99,8 +108,8 @@ const Section = props => {
         </Container>
       </section>
       {/* about end */}
-      <SectionPost sectionTitle="事例集" data={casesData} />
-      <SectionPost sectionTitle="ブログ" data={blogData} />
+      <SectionPost sectionTitle="Blog" data={casesData} />
+      <SectionPost sectionTitle="Case Studies" data={blogData} />
     </React.Fragment>
   )
 }

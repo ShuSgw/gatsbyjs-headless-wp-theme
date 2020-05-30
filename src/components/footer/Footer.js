@@ -16,11 +16,11 @@ import Container from "../container/Container"
 
 const Footer = ({ menuTitle, toggleNav, boolNav }) => {
   return (
-    <footer className={footer}>
+    <footer id="link1" className={footer}>
       <Container>
         <div className={footer_box}>
           <div className={footer_box_single}>
-            <div class={footer_box_single_title}>
+            <div className={footer_box_single_title}>
               お見積り、ご相談
               <br />
               お問い合わせはこちらまで

@@ -27,9 +27,9 @@ const HeroHeader = props => {
     <BackgroundImage className={hero_header} fluid={imageData}>
       <Container>
         <div className={hero_contentsBox}>
-          <h1 className={hero_header_title}>
-            この文章はダミーです 文字の大きさ、 量、字間、
-          </h1>
+          <div className={hero_header_title}>
+            この文章はダミーです 文字の大きさ、 量、字間
+          </div>
         </div>
       </Container>
     </BackgroundImage>

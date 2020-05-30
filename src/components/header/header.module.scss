@@ -27,6 +27,7 @@
     top: 0;
     right: 0;
     z-index: 9999;
+    color: black;
 
     @include tab {
         display: none;
@@ -39,9 +40,15 @@
     top: 0;
     right: 0;
     position: 9999;
+    color: black;
 }
 
 .logoImgWrap {
     width: 100px;
     padding: 15px 0;
+
+    @include tab {
+        padding-top: 5px;
+    }
+
 }

@@ -7,6 +7,7 @@ import {
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "../container/Container"
+
 const OtherHero = ({ title }) => {
   const data = useStaticQuery(graphql`
     query {

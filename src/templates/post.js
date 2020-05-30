@@ -13,7 +13,7 @@ const postTemplate = props => {
       )}
       <Container>
         <div dangerouslySetInnerHTML={{ __html: content }} />
-        <p>{acf ? (acf.name ? acf.name : "no name") : "no data"}</p>
+        {/* <p>{acf ? (acf.name ? acf.name : "no name") : "no data"}</p> */}
       </Container>
     </Layout>
   )

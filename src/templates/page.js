@@ -3,10 +3,11 @@ import Layout from "../components/layout/Layout"
 import Container from "../components/container/Container"
 import OtherHeros from "../components/hero-header/OtherHeros"
 import OtherHeros_placeholder from "../components/hero-header/OtherHeros_placeholder"
+import WPGBlocks from "react-gutenberg"
+import { IWPGBlock } from "react-gutenberg/src/types.d.ts"
 
 const pageTemplate = props => {
   const { title, content, acf, featured_media } = props.data.wordpressPage
-
   return (
     <Layout>
       {featured_media ? (
