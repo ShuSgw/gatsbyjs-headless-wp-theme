@@ -14,6 +14,8 @@ import {
   header,
 } from "./header.module.scss"
 
+import { Helmet } from "react-helmet"
+
 import Container from "../container/Container"
 import Image from "../Image"
 
@@ -21,6 +23,10 @@ const Header = props => {
   const [boolNav, toggleNav] = useState(false)
   return (
     <header className={header}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ranunculus Design</title>
+      </Helmet>
       <Container>
         <div className={headerContentsWrap}>
           {/* display:none on ↓ desktop */}
