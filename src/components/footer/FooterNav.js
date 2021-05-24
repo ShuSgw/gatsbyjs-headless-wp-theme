@@ -4,7 +4,8 @@ import { Link } from "gatsby"
 import { footerNav, footerNav_items_item } from "./footer.module.scss"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
-const FooterNav = ({ menuTitle }) => {
+const FooterNav = ({ menuTitle }) =>
+{
   const { allWordpressMenusMenusItems } = useStaticQuery(graphql`
     query menuListForFooter {
       allWordpressMenusMenusItems {
@@ -23,16 +24,18 @@ const FooterNav = ({ menuTitle }) => {
       }
     }
   `)
-  const menus = allWordpressMenusMenusItems.edges.find(menus => {
+  const menus = allWordpressMenusMenusItems.edges.find(menus =>
+  {
     return menus.node.slug === menuTitle
   })
-  const items = menus.node.items.map(item => {
+  const items = menus.node.items.map(item =>
+  {
     return item
   })
   return (
     <div className={footerNav}>
       <div>
-        {items.map((item, key) => (
+        {/* {items.map((item, key) => (
           <div key={key} className={footerNav_items_item}>
             <Link to={item.slug !== null ? `/${item.slug}` : "/"}>
               {item.title}
@@ -54,10 +57,20 @@ const FooterNav = ({ menuTitle }) => {
               </div>
             )}
           </div>
-        ))}
+        ))} */}
         <div className={footerNav_items_item}>
-          <AnchorLink href="#link1" offset="0">
-            ブログ
+          <AnchorLink href="#about" offset="0">
+            - About
+          </AnchorLink>
+        </div>
+        <div className={footerNav_items_item}>
+          <AnchorLink href="#service" offset="0">
+            - Service
+          </AnchorLink>
+        </div>
+        <div className={footerNav_items_item}>
+          <AnchorLink href="#contact" offset="0">
+            - Contact
           </AnchorLink>
         </div>
       </div>

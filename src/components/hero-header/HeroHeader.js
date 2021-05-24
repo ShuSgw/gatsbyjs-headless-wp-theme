@@ -1,5 +1,6 @@
 import React from "react"
-import {
+import
+{
   hero_header,
   container,
   hero_header_title,
@@ -10,7 +11,8 @@ import BackgroundImage from "gatsby-background-image"
 
 import Container from "../container/Container"
 
-const HeroHeader = props => {
+const HeroHeader = props =>
+{
   const imageDataQueried = useStaticQuery(graphql`
     query {
       desktop: file(relativePath: { eq: "hero.png" }) {
@@ -28,7 +30,7 @@ const HeroHeader = props => {
       <Container>
         <div className={hero_contentsBox}>
           <div className={hero_header_title}>
-            この文章はダミーです 文字の大きさ、 量、字間
+            RANUNCULUS DESIGN<br />2人の軌跡をカタチにする
           </div>
         </div>
       </Container>

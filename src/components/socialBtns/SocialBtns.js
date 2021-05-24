@@ -1,25 +1,31 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
+import
+{
   faFacebookF,
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 
-import {
+import
+{
   socialBtns,
   socialBtns_wrap,
   socialBtn,
 } from "./socialBtns.module.scss"
 
-const SocialBtns = props => {
-  const socialIcons = [faFacebookF, faTwitter, faInstagram]
+const SocialBtns = props =>
+{
+  // const socialIcons = [faInstagram, faFacebookF, faTwitter]
+  // const socialIconsLink = ['https://www.instagram.com/fleurichcreations/?hl=ja', 'ff', 'tt']
+  const socialIcons = [faInstagram]
+  const socialIconsLink = ['https://www.instagram.com/ranunculus.floral.design/']
   return (
     <div className={socialBtns}>
       {socialIcons.map((icon, key) => (
-        <div key={key} className={socialBtns_wrap}>
+        <a href={socialIconsLink[key]} key={key} className={socialBtns_wrap} target="_blank">
           <FontAwesomeIcon className={socialBtn} icon={icon} />
-        </div>
+        </a>
       ))}
     </div>
   )

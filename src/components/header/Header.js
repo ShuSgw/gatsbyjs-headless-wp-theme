@@ -5,7 +5,8 @@ import { Link } from "gatsby"
 import Nav from "../nav/Nav"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
-import {
+import
+{
   closing,
   closingIconWrap,
   logoImgWrap,
@@ -19,7 +20,8 @@ import { Helmet } from "react-helmet"
 import Container from "../container/Container"
 import Image from "../Image"
 
-const Header = props => {
+const Header = props =>
+{
   const [boolNav, toggleNav] = useState(false)
   return (
     <header className={header}>
@@ -33,7 +35,8 @@ const Header = props => {
           <div className={closingIconWrap}>
             <FontAwesomeIcon
               className={closing}
-              onClick={() => {
+              onClick={() =>
+              {
                 toggleNav(!boolNav)
               }}
               icon={faBars}

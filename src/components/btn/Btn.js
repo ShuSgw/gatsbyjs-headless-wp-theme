@@ -2,11 +2,12 @@ import React from "react"
 import { btn } from "./btn.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const Btn = ({ content, icon }) => {
+const Btn = ({ content, icon, forWhat }) =>
+{
   return (
     <React.Fragment>
       <a
-        href="mailto:info@ranunculus-design.com"
+        href={forWhat}
         target="_blank"
         className={btn}
       >

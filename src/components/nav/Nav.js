@@ -3,7 +3,8 @@ import SocialBtns from "../socialBtns/SocialBtns"
 
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
-import {
+import
+{
   styleItems,
   styleNavWrap,
   styleNav,
@@ -17,7 +18,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
-const Nav = ({ menuTitle, toggleNav, boolNav }) => {
+const Nav = ({ menuTitle, toggleNav, boolNav }) =>
+{
   const { allWordpressMenusMenusItems } = useStaticQuery(graphql`
     query menuList {
       allWordpressMenusMenusItems {
@@ -41,10 +43,12 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
     }
   `)
 
-  const menus = allWordpressMenusMenusItems.edges.find(menus => {
+  const menus = allWordpressMenusMenusItems.edges.find(menus =>
+  {
     return menus.node.slug === menuTitle
   })
-  const items = menus.node.items.map(item => {
+  const items = menus.node.items.map(item =>
+  {
     return item
   })
 
@@ -52,7 +56,8 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
     <div className={`${styleNavWrap} ${boolNav && active}`}>
       <div className={hamburgerIconWrap}>
         <FontAwesomeIcon
-          onClick={() => {
+          onClick={() =>
+          {
             toggleNav(!boolNav)
           }}
           className={hamburger}
@@ -60,10 +65,11 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
         />
       </div>
       <div className={styleNav}>
-        {items.map((item, key) => (
+        {/* {items.map((item, key) => (
           <div
             key={key}
-            onClick={() => {
+            onClick={() =>
+            {
               toggleNav(!boolNav)
             }}
           >
@@ -90,16 +96,34 @@ const Nav = ({ menuTitle, toggleNav, boolNav }) => {
                   ))}
               </div>
             )}
+
           </div>
-        ))}
+        ))} */}
+
+        <AnchorLink className={styleItems} href="#about" offset="50px" onClick={() =>
+        {
+          toggleNav(!boolNav)
+        }}>
+          About
+          </AnchorLink>
+        <AnchorLink className={styleItems} href="#service" offset="0" onClick={() =>
+        {
+          toggleNav(!boolNav)
+        }}>
+          Service
+          </AnchorLink>
+        <AnchorLink className={styleItems} href="#contact" offset="0" onClick={() =>
+        {
+          toggleNav(!boolNav)
+        }}>
+          Contact Me
+        </AnchorLink>
         <div
-          onClick={() => {
+          onClick={() =>
+          {
             toggleNav(!boolNav)
           }}
         >
-          <AnchorLink className={styleItems} href="#link1" offset="0">
-            Contact Me
-          </AnchorLink>
         </div>
         <SocialBtns />
       </div>

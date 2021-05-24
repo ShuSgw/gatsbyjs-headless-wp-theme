@@ -32,6 +32,7 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options: {
         baseUrl: "ranunculus-design.com/main/",
+        // baseUrl: "ranunculusdesign.lo/",
         protocol: "http",
         hostingWPCOM: false,
         useACF: true,

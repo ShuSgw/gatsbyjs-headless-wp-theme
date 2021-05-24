@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-import {
+import
+{
   container,
   h3_line,
   about_box,
@@ -13,10 +14,13 @@ import {
 
 import Image from "../image"
 import SectionPost from "./SectionPost"
+import SectionStatic from "./SectionStatic"
+
 
 import Container from "../container/Container"
 
-const Section = props => {
+const Section = props =>
+{
   const {
     allWordpressPage,
     post1,
@@ -88,16 +92,22 @@ const Section = props => {
       {/* about */}
       <section>
         <Container>
-          <div className={about_box}>
+          <div id="about" className={about_box}>
             <div className={about_box_single}>
               <div className={`${about_title} custom_h3`}>
                 <span className={h3_line}>About</span>
               </div>
               {/* <div dangerouslySetInnerHTML={{ __html: about.content }} /> */}
-              <div>{about.acf.simple_description}</div>
-              <Link className={about_link} to={about.slug}>
+              {/* <div>{about.acf.simple_description}</div> */}
+              <div>
+                人生節目をたったその1日だけで終わるのでなく、あなたの原点としていつまでも心の中に輝き続けられるように…
+                この先辛いことや悲しいことがあっても、この日を想い返してまた笑顔になれるような特別な宝物を一緒に作りましょう。
+                Ranunculus Designはクライアントの皆様との対話を重視しております。
+                お2人の軌跡をお聞かせください。
+              </div>
+              {/* <Link className={about_link} to={about.slug}>
                 もっと見る
-              </Link>
+              </Link> */}
             </div>
             <div className={about_box_single}>
               <div className={about_img}>
@@ -108,8 +118,9 @@ const Section = props => {
         </Container>
       </section>
       {/* about end */}
-      <SectionPost sectionTitle="Blog" data={casesData} />
-      <SectionPost sectionTitle="Case Studies" data={blogData} />
+      {/* <SectionPost sectionTitle="Blog" data={casesData} />
+      <SectionPost sectionTitle="Case Studies" data={blogData} /> */}
+      <SectionStatic sectionTitle="Services" />
     </React.Fragment>
   )
 }
