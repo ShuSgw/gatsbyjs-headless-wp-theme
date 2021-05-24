@@ -87,7 +87,7 @@ const SectionPost = ({ data, sectionTitle }) =>
             <div className={post_box_single_title}>PHOTOSHOOT</div>
             <p>特別な日をとっておきの1枚の写真に…</p>
             <div className={post_box_single_whitebox}>
-              <p>Birthday, Anniversary, Baby shower, Christomas, Halloween, Family photo</p>
+              <p>Birthday, Anniversary, Baby shower, Christmas, Halloween, Family photo</p>
             </div>
             <br />
           </div>
